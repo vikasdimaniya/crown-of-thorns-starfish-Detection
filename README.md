@@ -3,7 +3,7 @@
 ## Overview
 The Great Barrier Reef faces significant ecological threats due to the overpopulation of crown-of-thorns starfish (COTS). This project aimed to develop a scalable and efficient object detection system using YOLOv8 to identify COTS in underwater imagery. By utilizing deep learning techniques, this system can assist in preserving coral ecosystems by enabling real-time monitoring of COTS outbreaks.
 
-![System Workflow](images/system_workflow.png)
+![image_data](images/ouput-1.png)
 
 ## Features
 - **Model Architecture:** YOLOv8 for real-time object detection.
@@ -12,7 +12,7 @@ The Great Barrier Reef faces significant ecological threats due to the overpopul
 - **Evaluation Metrics:** Precision, Recall, mAP50, mAP50-95.
 - **Optimizations:** Hyperparameter tuning, SGD optimizer, and learning rate adjustments.
 
-![YOLOv8 Architecture](images/yolov8_architecture.jpg)
+![YOLOv8 Architecture](images/yolov8-arch.jpg)
 
 ---
 
@@ -47,16 +47,13 @@ The methodology incorporates:
 - **Model Training:** Fine-tuning YOLOv8 using annotated datasets.
 - **Evaluation:** Metrics like precision, recall, and mAP.
 
-### Workflow Diagram:
-![Workflow Diagram](images/system_workflow.png)
-
 ### Data Augmentation:
 ![Training Batch](images/train_batch1.jpg)
 
 ---
 
 ## Results
-The YOLOv8 model was evaluated using different configurations. The small variant (YOLOv8s) outperformed medium and large variants in precision, recall, and inference speed.
+The YOLOv8 model was evaluated using different configurations. The small variant (YOLOv8s) outperformed the medium and large variants in precision, recall, and inference speed.
 
 ### Key Metrics:
 | Model | Precision | Recall | mAP50 | mAP50-95 | Inference Time |
@@ -66,7 +63,7 @@ The YOLOv8 model was evaluated using different configurations. The small variant
 | YOLOv8l | 0.883 | 0.724 | 0.798 | 0.380 | 9.0 ms |
 
 ### Performance Trends:
-![Performance Over Epochs](images/performace_over_epochs.png)
+![Performance Over Epochs](images/performace%20over%20epochs.png)
 
 ### Confusion Matrix:
 ![Confusion Matrix](images/confusion_matrix.png)
@@ -87,25 +84,7 @@ To get started with this project:
    pip install -r requirements.txt
    ```
 
-3. Download the dataset and place it in the `data/` folder.
-
----
-
-## Usage
-Run the training script:
-```bash
-python train.py --epochs 50 --batch-size 32
-```
-
-Evaluate the model:
-```bash
-python evaluate.py --weights best.pt --data data.yaml
-```
-
-Visualize results:
-```bash
-python visualize.py --output results/
-```
+3. Download the dataset from kaggle and place it in the `data/` folder.
 
 ---
 
@@ -119,8 +98,6 @@ Future enhancements include:
 
 ## Acknowledgments
 This project utilized the YOLOv8 framework developed by Ultralytics and underwater datasets provided by CSIRO.
-
-![Loss Trends](images/loss_trends_over_epochs.png)
 
 ---
 
